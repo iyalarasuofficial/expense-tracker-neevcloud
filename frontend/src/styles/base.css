@@ -1,0 +1,138 @@
+:root {
+  --color-primary: #ff8f3f;
+  --color-primary-dark: #f57a1d;
+  --color-bg: #fdfaf6;
+  --color-bg-alt: #fff;
+  --color-border: #d7c9bc;
+  --color-text: #322318;
+  --color-text-light: #6f5f55;
+  --color-success: #0a7f44;
+  --color-error: #9e2c1a;
+  --color-error-bg: #ffe8eb;
+  --color-warning: #d97706;
+
+  --font-sans: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  --size-xs: 0.5rem;
+  --size-sm: 0.75rem;
+  --size-md: 1rem;
+  --size-lg: 1.5rem;
+  --size-xl: 2rem;
+  --size-2xl: 3rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(95, 64, 34, 0.08);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: var(--size-md);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--size-md);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--size-sm);
+}
+
+p {
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--size-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 143, 63, 0.1);
+  }
+
+  &:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--size-md) var(--size-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
