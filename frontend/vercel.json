@@ -1,9 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "env": {
-    "VITE_ENV": "@build_vite_env"
-  },
   "rewrites": [
     {
       "source": "/(.*)",
